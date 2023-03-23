@@ -27,9 +27,18 @@ namespace BookOrderingSystem.Domain.Models
         [Required]
         public string Author { get; set; }
 
-        [Display(Name = "List Price")]
-        public double ListPrice { get; set; }
+		[Display(Name = "List Price")]
+		public double ListPrice { get; set; }
 
+		[Display(Name = "Price for 50 books")]
+		public double Price50 { get; set; }
+
+        [Display(Name = "Price for 100 books")]
+		public double Price100 { get; set; }
+
+        [Display(Name = "Image URL")]
+		public string? ImageURL { get; set; }
+	
         public double Price { get; set; }
 
         [Display(Name = "Category")]

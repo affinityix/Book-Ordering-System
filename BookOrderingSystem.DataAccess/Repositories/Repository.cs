@@ -73,5 +73,15 @@ namespace BookOrderingSystem.DataAccess.Repositories
         {
             return _dbSet.Find(Id);
         }
-    }
+
+		public void Remove(T entity)
+		{
+			_dbSet.Remove(entity);
+		}
+
+		public void RemoveRange(IEnumerable<T> entities)
+		{
+			_dbContext.RemoveRange(entities);
+		}
+	}
 }
